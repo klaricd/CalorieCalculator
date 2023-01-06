@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Entry" representedClassName="Entry" syncable="YES">
+        <attribute name="breakfastMeal1" optional="YES" attributeType="String"/>
+        <attribute name="breakfastMeal2" optional="YES" attributeType="String"/>
+        <attribute name="breakfastMeal3" optional="YES" attributeType="String"/>
+        <attribute name="breakfastTotal" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dinnerMeal1" optional="YES" attributeType="String"/>
+        <attribute name="dinnerMeal2" optional="YES" attributeType="String"/>
+        <attribute name="dinnerMeal3" optional="YES" attributeType="String"/>
+        <attribute name="dinnerTotal" optional="YES" attributeType="String"/>
+        <attribute name="goalCalories" optional="YES" attributeType="String"/>
+        <attribute name="lunchMeal1" optional="YES" attributeType="String"/>
+        <attribute name="lunchMeal2" optional="YES" attributeType="String"/>
+        <attribute name="lunchMeal3" optional="YES" attributeType="String"/>
+        <attribute name="lunchTotal" optional="YES" attributeType="String"/>
+        <attribute name="snacksMeal1" optional="YES" attributeType="String"/>
+        <attribute name="snacksMeal2" optional="YES" attributeType="String"/>
+        <attribute name="snacksMeal3" optional="YES" attributeType="String"/>
+        <attribute name="snacksTotal" optional="YES" attributeType="String"/>
+        <attribute name="totalCalories" optional="YES" attributeType="String"/>
+    </entity>
+</model>
