@@ -21,4 +21,8 @@
         <attribute name="snacksTotal" optional="YES" attributeType="String"/>
         <attribute name="totalCalories" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="FoodEntry" representedClassName="FoodEntry" syncable="YES">
+        <attribute name="foodCalories" optional="YES" attributeType="String"/>
+        <attribute name="foodName" optional="YES" attributeType="String"/>
+    </entity>
 </model>

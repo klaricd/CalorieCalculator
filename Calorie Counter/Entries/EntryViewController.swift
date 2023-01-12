@@ -9,6 +9,8 @@ import UIKit
 
 class EntryViewController: UIViewController, UITextFieldDelegate {
     
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var totalCalories: UILabel!
     
@@ -45,13 +47,20 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
         
         setupTextFields()
         setupEntry()
-    }
+        setupNotificationCenter()
+        }
     
     private func setupTextFields() {
         let textFields = [bMeal1, bMeal2, bMeal3, lMeal1, lMeal2, lMeal3, dMeal1, dMeal2, dMeal3, sMeal1, sMeal2, sMeal3]
         for textField in textFields {
             textField?.addTarget(self, action: #selector(textChanged), for: .editingChanged)
         }
+    }
+    
+    private func setupNotificationCenter() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     private func setupEntry() {
@@ -206,6 +215,22 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
 
         // save context
         AppDelegate.shared.saveContext()
+    }
+    
+    // this function adjust scroll view to fit keyboard
+    @objc func adjustForKeyboard(notification: Notification) {
+        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        
+        let keyboardScreenEndFrame = keyboardValue.cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+        
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            scrollView.contentInset = .zero
+        } else {
+            scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
+        }
+        
+        scrollView.scrollIndicatorInsets = scrollView.contentInset
     }
     
     

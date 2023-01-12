@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yhg-Zf-Hgm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eNN-oQ-RZp">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -104,7 +104,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4F1-kg-BvG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101.5384615384614" y="-52.606635071090047"/>
+            <point key="canvasLocation" x="-1982" y="699"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="osb-Bj-eRB">
@@ -644,17 +644,223 @@
                         <outlet property="sMeal2" destination="KHI-ys-dYX" id="zRh-Rk-xei"/>
                         <outlet property="sMeal3" destination="9Qg-vi-Rwz" id="CmI-TB-9BU"/>
                         <outlet property="sTotal" destination="3o6-Du-Kg8" id="hXd-pD-ecm"/>
+                        <outlet property="scrollView" destination="FhN-nT-SmJ" id="cII-fL-YKn"/>
                         <outlet property="totalCalories" destination="AaU-bB-2Gp" id="2It-Fg-oIC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sT-eA-QMo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1987.6923076923076" y="1.4218009478672986"/>
+            <point key="canvasLocation" x="-1194" y="754"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Food List-->
+        <scene sceneID="MBN-x3-iYX">
+            <objects>
+                <tableViewController id="k8Q-kP-M5A" customClass="FoodTableViewController" customModule="Calorie_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="YIj-jY-QGY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodEntryCell" rowHeight="50" id="1dB-Sl-kTP" customClass="FoodTableViewCell" customModule="Calorie_Counter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1dB-Sl-kTP" id="iou-i1-wge">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eggs and bacon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poP-Hi-uUY">
+                                            <rect key="frame" x="19.999999999999993" y="11" width="122.33333333333331" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250 kcal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRy-86-YC3">
+                                            <rect key="frame" x="305" y="11" width="65" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tRy-86-YC3" firstAttribute="top" secondItem="iou-i1-wge" secondAttribute="topMargin" id="6Un-VW-2Sb"/>
+                                        <constraint firstItem="poP-Hi-uUY" firstAttribute="top" secondItem="iou-i1-wge" secondAttribute="topMargin" id="AEI-tV-qiy"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="tRy-86-YC3" secondAttribute="bottom" id="CQc-jt-CKn"/>
+                                        <constraint firstItem="poP-Hi-uUY" firstAttribute="leading" secondItem="iou-i1-wge" secondAttribute="leadingMargin" id="MGh-Oo-P2L"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tRy-86-YC3" secondAttribute="trailing" id="VqD-oq-TqR"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="poP-Hi-uUY" secondAttribute="bottom" id="XuX-Nk-oAS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="foodCalorieLabel" destination="tRy-86-YC3" id="SVY-Vk-XLd"/>
+                                    <outlet property="foodNameLabel" destination="poP-Hi-uUY" id="uTo-YY-RAU"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="k8Q-kP-M5A" id="9NC-CY-gK2"/>
+                            <outlet property="delegate" destination="k8Q-kP-M5A" id="ibW-8p-0ge"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Food List" id="w32-dM-lUS">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="w24-UP-DgJ">
+                            <connections>
+                                <segue destination="lYH-Q1-xrb" kind="show" id="csN-1f-eGg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6mD-zA-z2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-126.15384615384615" y="698.8151658767772"/>
+        </scene>
+        <!--Food View Controller-->
+        <scene sceneID="SRi-8O-60K">
+            <objects>
+                <viewController id="lYH-Q1-xrb" customClass="FoodViewController" customModule="Calorie_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4RO-iP-whR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x46-P8-lso">
+                                <rect key="frame" x="30" y="121" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. Eggs and bacon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VDd-Rx-TP4">
+                                <rect key="frame" x="30" y="157" width="330" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rE0-1u-buZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="By0-7V-TBS">
+                                <rect key="frame" x="30" y="217" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. 350" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pxQ-O0-B9u">
+                                <rect key="frame" x="30" y="253" width="330" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ryt-0l-9VM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9Q-6p-5t9">
+                                <rect key="frame" x="135" y="313" width="120" height="34.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="7EU-h7-WRT"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="gray" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="lYH-Q1-xrb" eventType="touchUpInside" id="KGo-gy-gnF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qWX-1j-Zd3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x46-P8-lso" firstAttribute="leading" secondItem="qWX-1j-Zd3" secondAttribute="leading" constant="30" id="50x-YV-cJa"/>
+                            <constraint firstItem="pxQ-O0-B9u" firstAttribute="top" secondItem="By0-7V-TBS" secondAttribute="bottom" constant="15" id="CZW-Ey-NnL"/>
+                            <constraint firstItem="By0-7V-TBS" firstAttribute="leading" secondItem="qWX-1j-Zd3" secondAttribute="leading" constant="30" id="GWo-Lq-N9U"/>
+                            <constraint firstItem="pxQ-O0-B9u" firstAttribute="leading" secondItem="qWX-1j-Zd3" secondAttribute="leading" constant="30" id="LHZ-eg-oox"/>
+                            <constraint firstItem="qWX-1j-Zd3" firstAttribute="trailing" secondItem="VDd-Rx-TP4" secondAttribute="trailing" constant="30" id="WOf-FE-asz"/>
+                            <constraint firstItem="v9Q-6p-5t9" firstAttribute="top" secondItem="pxQ-O0-B9u" secondAttribute="bottom" constant="30" id="bZM-wi-0RB"/>
+                            <constraint firstItem="VDd-Rx-TP4" firstAttribute="leading" secondItem="qWX-1j-Zd3" secondAttribute="leading" constant="30" id="esm-lK-JTV"/>
+                            <constraint firstItem="x46-P8-lso" firstAttribute="top" secondItem="qWX-1j-Zd3" secondAttribute="top" constant="30" id="kUc-wU-0XU"/>
+                            <constraint firstItem="VDd-Rx-TP4" firstAttribute="top" secondItem="x46-P8-lso" secondAttribute="bottom" constant="15" id="l65-jk-eto"/>
+                            <constraint firstItem="By0-7V-TBS" firstAttribute="top" secondItem="VDd-Rx-TP4" secondAttribute="bottom" constant="30" id="rtp-Uf-nEE"/>
+                            <constraint firstItem="v9Q-6p-5t9" firstAttribute="centerX" secondItem="4RO-iP-whR" secondAttribute="centerX" id="x5X-gZ-0wh"/>
+                            <constraint firstItem="qWX-1j-Zd3" firstAttribute="trailing" secondItem="pxQ-O0-B9u" secondAttribute="trailing" constant="30" id="xVl-9j-LD8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jR7-VL-QG1"/>
+                    <connections>
+                        <outlet property="foodCalories" destination="pxQ-O0-B9u" id="UNI-fO-lap"/>
+                        <outlet property="foodName" destination="VDd-Rx-TP4" id="Ky1-4e-7iT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9C-ko-GT0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="699"/>
+        </scene>
+        <!--Calculator-->
+        <scene sceneID="LJ0-97-RJw">
+            <objects>
+                <viewController id="Qdq-Zd-I4i" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rIt-oN-9pq">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bqH-Eq-KNV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calculator" id="079-K1-NiR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0j-37-10f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="699"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="HZk-q4-v4J">
+            <objects>
+                <tabBarController id="eNN-oQ-RZp" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D0G-Ja-b05">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Yhg-Zf-Hgm" kind="relationship" relationship="viewControllers" id="fK0-SY-xts"/>
+                        <segue destination="E5s-sV-tME" kind="relationship" relationship="viewControllers" id="Gi9-Xe-fXz"/>
+                        <segue destination="FKa-H8-0v2" kind="relationship" relationship="viewControllers" id="0Ba-kM-vH0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixJ-9I-jDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277" y="-834"/>
+        </scene>
+        <!--Food-->
+        <scene sceneID="KU2-Bb-HC2">
+            <objects>
+                <navigationController id="E5s-sV-tME" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Food" image="list.bullet" catalog="system" id="yXb-3E-Qf9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cup-Rk-Bb5">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="k8Q-kP-M5A" kind="relationship" relationship="rootViewController" id="BMx-j2-ZrB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o1d-rS-Hys" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277" y="-95"/>
+        </scene>
+        <!--Calculator-->
+        <scene sceneID="904-8n-Tj3">
+            <objects>
+                <navigationController id="FKa-H8-0v2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calculator" image="plusminus.circle" catalog="system" id="Qgp-hC-IFm"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TML-Aa-ZRt">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Qdq-Zd-I4i" kind="relationship" relationship="rootViewController" id="wrD-Ru-7GY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFG-0y-Ln0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="-95"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="iiX-4c-Ac2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yhg-Zf-Hgm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="KDM-Ps-zBb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4wh-Up-DR4">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -667,10 +873,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFh-0c-fZ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="-53"/>
+            <point key="canvasLocation" x="-1588" y="-95"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <image name="plusminus.circle" catalog="system" width="128" height="123"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="113"/>
         <image name="trash" catalog="system" width="117" height="128"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

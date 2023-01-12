@@ -2,7 +2,7 @@
 //  Entry+CoreDataProperties.swift
 //  Calorie Counter
 //
-//  Created by David Klaric on 04.01.2023..
+//  Created by David Klaric on 10.01.2023..
 //
 //
 
@@ -25,6 +25,7 @@ extension Entry {
     @NSManaged public var dinnerMeal2: String?
     @NSManaged public var dinnerMeal3: String?
     @NSManaged public var dinnerTotal: String?
+    @NSManaged public var goalCalories: String?
     @NSManaged public var lunchMeal1: String?
     @NSManaged public var lunchMeal2: String?
     @NSManaged public var lunchMeal3: String?
@@ -34,29 +35,29 @@ extension Entry {
     @NSManaged public var snacksMeal3: String?
     @NSManaged public var snacksTotal: String?
     @NSManaged public var totalCalories: String?
-    @NSManaged public var goalCalories: String?
 
 }
 
 extension Entry : Identifiable {
     
     func month() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMM"
-        if let dateToBeFormatted = date {
-            let month = formatter.string(from: dateToBeFormatted)
-        return month.uppercased()
-        }
-        return ""
+     let formatter = DateFormatter()
+     formatter.dateFormat = "MMM"
+     if let dateToBeFormatted = date {
+         let month = formatter.string(from: dateToBeFormatted)
+         return month.uppercased()
+     }
+     return ""
     }
-    
+
     func day() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "d"
-        if let dateToBeFormatted = date {
-            let day = formatter.string(from: dateToBeFormatted)
-        return day
-        }
-        return ""
+     let formatter = DateFormatter()
+     formatter.dateFormat = "d"
+     if let dateToBeFormatted = date {
+         let day = formatter.string(from: dateToBeFormatted)
+         return day
+     }
+     return ""
     }
+
 }

@@ -2,7 +2,7 @@
 //  Entry+CoreDataClass.swift
 //  Calorie Counter
 //
-//  Created by David Klaric on 04.01.2023..
+//  Created by David Klaric on 10.01.2023..
 //
 //
 
