@@ -35,12 +35,12 @@ class EntriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "EntryCell") as? EntryTableViewCell {
-            
             let entry = entries[indexPath.row]
             
             cell.calorieLabel.text = entry.totalCalories
-            // calorie goal customization will be on next app version :)
-            cell.goalLabel.text = "2800"
+            if let savedString = UserDefaults.standard.object(forKey: "savedString") as? String {
+                cell.goalLabel.text = savedString
+            }
             cell.dayLabel.text = entry.day()
             cell.monthLabel.text = entry.month()
             

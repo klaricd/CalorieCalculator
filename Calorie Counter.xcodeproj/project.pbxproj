@@ -14,6 +14,9 @@
 		6337248F296D67FD0093AB54 /* Entry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6337248B296D67FC0093AB54 /* Entry+CoreDataProperties.swift */; };
 		63372490296D67FD0093AB54 /* FoodEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6337248C296D67FC0093AB54 /* FoodEntry+CoreDataClass.swift */; };
 		63372491296D67FD0093AB54 /* FoodEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6337248D296D67FD0093AB54 /* FoodEntry+CoreDataProperties.swift */; };
+		6340363C2981570C0003F017 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340363B2981570C0003F017 /* TabBarViewController.swift */; };
+		6340363E2981580E0003F017 /* TabBarWithCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340363D2981580E0003F017 /* TabBarWithCorners.swift */; };
+		6364C03F297155A2006B0BCC /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6364C03E297155A2006B0BCC /* Utility.swift */; };
 		6394C5C6291C06C8008DC64E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394C5C5291C06C8008DC64E /* AppDelegate.swift */; };
 		6394C5C8291C06C8008DC64E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394C5C7291C06C8008DC64E /* SceneDelegate.swift */; };
 		6394C5CD291C06C8008DC64E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6394C5CB291C06C8008DC64E /* Main.storyboard */; };
@@ -22,6 +25,7 @@
 		6394C5D5291C06C8008DC64E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6394C5D3291C06C8008DC64E /* LaunchScreen.storyboard */; };
 		63B84739291D4F8C00F4ED28 /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B84738291D4F8C00F4ED28 /* EntriesTableViewController.swift */; };
 		63B8473B291D4FBD00F4ED28 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B8473A291D4FBD00F4ED28 /* EntryViewController.swift */; };
+		63C82D21297019C8006B17FE /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C82D20297019C8006B17FE /* CalculatorViewController.swift */; };
 		63F3FD3B2950CBD000DB6FA1 /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F3FD3A2950CBD000DB6FA1 /* EntryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,9 @@
 		6337248B296D67FC0093AB54 /* Entry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6337248C296D67FC0093AB54 /* FoodEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6337248D296D67FD0093AB54 /* FoodEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6340363B2981570C0003F017 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6340363D2981580E0003F017 /* TabBarWithCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarWithCorners.swift; sourceTree = "<group>"; };
+		6364C03E297155A2006B0BCC /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		6394C5C2291C06C8008DC64E /* Calorie Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calorie Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6394C5C5291C06C8008DC64E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6394C5C7291C06C8008DC64E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +50,7 @@
 		6394C5D6291C06C8008DC64E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B84738291D4F8C00F4ED28 /* EntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
 		63B8473A291D4FBD00F4ED28 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		63C82D20297019C8006B17FE /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		63F3FD3A2950CBD000DB6FA1 /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,8 +110,12 @@
 			children = (
 				6394C5C5291C06C8008DC64E /* AppDelegate.swift */,
 				6394C5C7291C06C8008DC64E /* SceneDelegate.swift */,
+				6364C03E297155A2006B0BCC /* Utility.swift */,
+				6340363B2981570C0003F017 /* TabBarViewController.swift */,
+				6340363D2981580E0003F017 /* TabBarWithCorners.swift */,
 				63372492296DA34D0093AB54 /* Entries */,
 				63372493296DA3640093AB54 /* Food */,
+				63C82D1F297019A3006B17FE /* Calculator */,
 				6394C5CB291C06C8008DC64E /* Main.storyboard */,
 				6394C5D1291C06C8008DC64E /* Assets.xcassets */,
 				6394C5D3291C06C8008DC64E /* LaunchScreen.storyboard */,
@@ -111,6 +123,14 @@
 				6394C5CE291C06C8008DC64E /* Calorie_Counter.xcdatamodeld */,
 			);
 			path = "Calorie Counter";
+			sourceTree = "<group>";
+		};
+		63C82D1F297019A3006B17FE /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				63C82D20297019C8006B17FE /* CalculatorViewController.swift */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,11 +204,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6340363C2981570C0003F017 /* TabBarViewController.swift in Sources */,
 				63372481296D5E470093AB54 /* FoodTableViewCell.swift in Sources */,
 				63F3FD3B2950CBD000DB6FA1 /* EntryTableViewCell.swift in Sources */,
+				6340363E2981580E0003F017 /* TabBarWithCorners.swift in Sources */,
 				63372490296D67FD0093AB54 /* FoodEntry+CoreDataClass.swift in Sources */,
 				63372479296C5B340093AB54 /* FoodTableViewController.swift in Sources */,
 				6394C5C6291C06C8008DC64E /* AppDelegate.swift in Sources */,
+				6364C03F297155A2006B0BCC /* Utility.swift in Sources */,
 				6337248F296D67FD0093AB54 /* Entry+CoreDataProperties.swift in Sources */,
 				63372491296D67FD0093AB54 /* FoodEntry+CoreDataProperties.swift in Sources */,
 				6394C5D0291C06C8008DC64E /* Calorie_Counter.xcdatamodeld in Sources */,
@@ -196,6 +219,7 @@
 				6337247B296C5BB60093AB54 /* FoodViewController.swift in Sources */,
 				63B84739291D4F8C00F4ED28 /* EntriesTableViewController.swift in Sources */,
 				6337248E296D67FD0093AB54 /* Entry+CoreDataClass.swift in Sources */,
+				63C82D21297019C8006B17FE /* CalculatorViewController.swift in Sources */,
 				63B8473B291D4FBD00F4ED28 /* EntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,10 +371,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Calorie Counter/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -359,9 +383,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "David-Klaric.Calorie-Counter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -376,10 +403,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Calorie Counter/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -388,9 +415,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "David-Klaric.Calorie-Counter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

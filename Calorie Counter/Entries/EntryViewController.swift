@@ -48,6 +48,8 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
         setupTextFields()
         setupEntry()
         setupNotificationCenter()
+        
+        self.hideKeyboardOnTap()
         }
     
     private func setupTextFields() {

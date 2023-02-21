@@ -22,9 +22,6 @@ class FoodTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-            
-            // sort tableview rows in food list
-            //request.sortDescriptors = [NSSortDescriptor(key: "", ascending: true)]
             let request: NSFetchRequest<FoodEntry> = FoodEntry.fetchRequest()
             
             if let entriesFromCoreData = try? context.fetch(request) {
@@ -40,7 +37,6 @@ class FoodTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "FoodEntryCell") as? FoodTableViewCell {
-            
             let foodentry = foodEntries[indexPath.row]
             
             cell.foodNameLabel.text = foodentry.foodName
@@ -61,8 +57,8 @@ class FoodTableViewController: UITableViewController {
 
         if editingStyle == .delete {
             let entryToDelete = foodEntries[indexPath.row]
-            context.delete(entryToDelete)
             
+            context.delete(entryToDelete)
             foodEntries.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             

@@ -14,6 +14,8 @@ class FoodViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyboardOnTap()
     }
     
     @IBAction func saveButton(_ sender: Any) {
